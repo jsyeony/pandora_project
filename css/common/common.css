@@ -1,0 +1,48 @@
+
+/* common.css */
+.clearfix:after,
+.clearfix::after {
+  content: "";
+  display: block;
+  width: 100%; height: 0;
+  clear: both;
+}
+
+.none { display: none; }
+
+.max_width_01 {
+  width: 95%;
+  min-width: 940px;
+  max-width: 1280px;
+  margin: auto;
+}
+
+@media screen and (max-width:939px) {
+  .max_width_01 { width: auto; min-width: auto; }
+}
+
+.first_margin > li:first-child { margin-left: 0; }
+.last_margin > li:last-child { margin-right: 0; }
+
+.blind_area a {
+  display: block;
+  width: 100%; height: 100%;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+}
+.blind_area ul span,
+.blind_area a > span,
+.blind_area button > span,
+.blind {
+  display: block;
+  position: absolute;
+  z-index: -1;
+  width: 0; height: 0;
+  overflow: hidden;
+}
+
+/* layout -------------------------------------------------------- */
+.area_content {
+  width: 940px; height: 370px;
+  margin: 48px auto 0; 
+}
