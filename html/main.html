@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jua&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
 
   <link rel="stylesheet" href="../css/common/reset.css">
@@ -34,15 +34,15 @@
           <h2 class="blind">page navigation</h2>
           <div class="unb">
             <h3 class="blind">user navigation bar</h3>
-            <ul class="clearfix">
-              <li><a href="./login.html"><span class="blind">mypage</span></a></li>
-              <li><a href="#"><span class="blind">매장 찾기</span></a></li>
-              <li>
+            <ul>
+              <li class="right_side_unb"><a href="./login.html"><span class="blind">mypage</span></a></li>
+              <li class="right_side_unb"><a href="#"><span class="blind">매장 찾기</span></a></li>
+              <li class="right_side_unb">
                 <button type="button">
                   <span class="blind">위시리스트 작성/편집</span>
                 </button>
               </li>
-              <li>
+              <li class="shop_now">
                 <a href="https://kr.pandora.net/main/main.asp" title="original pandora shop">
                   <span class="blind">지금 바로 구매하기</span>
                 </a>
@@ -73,7 +73,7 @@
       <h2 class="blind">판도라 브랜드 슬라이드 광고 배너</h2>
       <div class="banner_img"></div>
       <div class="slide_btn_area">
-        <button type="button">
+        <button type="button" class="next_btn">
           <span class="blind">next</span>
         </button>
         <button type="button">
@@ -96,14 +96,16 @@
           매일 다른 룩으로 스타일링하세요.
         </p>
       </div>
-      <div class="sub_contents_area">
-        <h3>pandora me</h3>
-        <p>룩을 리믹스 하세요.</p>
-        <a href="#">더보기</a>
+      <div class="sub_contents_box">
+        <div class="sub_contents_area">
+          <h3>pandora me</h3>
+          <p>룩을 리믹스 하세요.</p>
+          <a href="#">더보기</a>
+        </div>
       </div>
       <div class="new_product_img"></div>
       <div class="newbox_btn_area">
-        <button type="button"><span class="blind">next</span></button>
+        <button type="button" class="next_btn"><span class="blind">next</span></button>
         <button type="button"><span class="blind">prev</span></button>
       </div>
       <div class="modal">
@@ -126,7 +128,7 @@
             </li>
           </ul>
         </div>
-        <div class="modal_window">
+        <div class="modal_window none">
           <div class="modal_data">
             <div class="close_btn">
               <button type="button">닫기</button>
@@ -148,7 +150,7 @@
       </div>
     </article>
     <section id="subBox">
-      <div class="sub_contents_area">
+      <div class="subbox_contents_area">
         <h2>2022 <span class="capitalize_name">pandora</span> Club Charm</h2>
         <a href="#">더보기</a>
       </div>
@@ -178,8 +180,8 @@
         </p>
       </div>
       <div class="collabo_btn_area">
-        <button type="button">next</button>
-        <button type="button">prev</button>
+        <button type="button" class="next_btn"><span class="blind">next</span></button>
+        <button type="button"><span class="blind">prev</span></button>
       </div>
       <div class="collabo_indicator">
         <ul>
@@ -193,16 +195,18 @@
       <div class="collabo_img"></div>
     </section>
     <footer id="footBox">
-      <h2 class="blind">pandora sub logo</h2>
-      <div class="fnb">
-        <h3 class="blind">footer navigation bar</h3>
-        <ul>
-          <li><a href="#">팔찌</a></li>
-          <li><a href="#">참</a></li>
-          <li><a href="#">귀걸이</a></li>
-          <li><a href="#">목걸이 및 팬던트</a></li>
-          <li><a href="#">반지</a></li>
-        </ul>
+      <div class="footer_upper_list">
+        <h2><span class="blind">pandora sub logo</span></h2>
+        <div class="fnb">
+          <h3 class="blind">footer navigation bar</h3>
+          <ul>
+            <li><a href="#">팔찌</a></li>
+            <li><a href="#">참</a></li>
+            <li><a href="#">귀걸이</a></li>
+            <li><a href="#">목걸이 및 팬던트</a></li>
+            <li><a href="#">반지</a></li>
+          </ul>
+        </div>
       </div>
       <div class="info_area">
         <p>
@@ -215,9 +219,13 @@
           <dd>+82-2-1688-5501</dd>
         </dl>
       </div>
-      <div class="sns_area"></div> 
-      <div class="change_location_area"></div>
-      <div class="search_store_area"></div>
+      <div class="footer_middle_area">
+        <ul>
+          <li class="sns_area"></li> 
+          <li class="change_location_area"></li>
+          <li class="search_store_area"></li>
+        </ul>
+      </div>
       <div class="sub_fnb">
         <h4 class="blind">sub footer navigation bar</h4>
         <ul>
