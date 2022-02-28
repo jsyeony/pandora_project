@@ -22,6 +22,7 @@ h1 {
   background-size: contain;
 }
 h1 a {
+  display: block;
   width: 100%; height: 100%;
 }
 
@@ -49,6 +50,7 @@ h1 a {
   display: block;
   width: 100%; height: 100%;
 }
+.unb li:hover { background-color: #eee; }
 
 /* gnb ------------------------------------------------------------------------ */
 .gnb {
@@ -174,7 +176,7 @@ h1 a {
 /* 뉴박스 서브 이미지 박스 --------------------------------------------------------- */
 .sub_contents_box {
   position: absolute;
-  top: 318px; left: 310px;
+  top: 350px; left: 310px;
   width: 240px; height: 170px;
   background-color: #fff;
   border-radius: 5px;
@@ -202,6 +204,7 @@ h1 a {
   margin-left: 89px;
   font-size: 13px;
 }
+.sub_contents_area a:hover { background-color: #ddd; }
 .new_product_img {
   width: 940px; height: 370px;
   margin: auto; margin-top: 25px; margin-bottom: 62px;
@@ -214,7 +217,7 @@ h1 a {
 /* 뉴박스 제품 좌우 버튼 파트 ------------------------------------------------------ */
 .newbox_btn_area {
   position: absolute;
-  top: 745px; left: 0; right: 0;
+  top: 770px; left: 0; right: 0;
   width: 1320px; height: 60px;
   margin: auto;
   background-color: #fcf;
@@ -294,7 +297,7 @@ h1 a {
   width: 25%; height: 90%;
   bottom: 0; left: 5%;
   background-image: url(../../img/subbox/subbox_img.png);
-  box-shadow: 5px 0 4px rgba(0,0,0,0.25);
+  box-shadow: 10px 10px 4px rgba(0,0,0,0.25);
 }
 
 /* ------------------------------------------------------------------------------------------- */
@@ -382,15 +385,20 @@ h1 a {
 /* 콜라보 박스 버튼 영역 ---------------------------------------------------------- */
 .collabo_btn_area {
   position: absolute;
-  top: 408px; left: 0; right: 0;
-  width: 1180px; height: 40px;
+  top: 470px; left: 0; right: 0;
+  width: 1180px; height: 0;
   margin: auto;
-  background-color: #fff;
 }
 .collabo_btn_area button {
-  width: 20px; height: 40px;
-  background-color: #222;
+  width: 40px; height: 60px;
+  background-image: url(../../img/collabobox/white_arrow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60%;
 }
+.collabo_btn_area button:hover { background-color: rgba(255,255,255,0.25); }
+.collabo_btn_area button:focus { background-color: rgba(255,255,255,0.25); }
+
 
 /* 콜라보 박스 인디케이터 영역 ----------------------------------------------------- */
 .collabo_indicator {
@@ -408,15 +416,27 @@ h1 a {
   float: left;
   width: 22px; height: 100%;
   margin-right: 27px;
-  background-color: #333;
+  border-radius: 20px;
+  background-color: #c4c4c4;
+}
+.collabo_indicator li a {
+  display: block;
+  width: 100%; height: 100%;
 }
 .collabo_indicator li:last-child { margin-right: 0; }
+.collabo_indicator li.on {
+  width: 80px;
+  background-color: #ffc2ca;
+}
+
 .collabo_indicator p {
   float: right;
   width: 35px; height: 100%;
   padding-right: 20px;
   text-align: right;
 }
+
+.collabo_indicator li:hover { background-color: #888;}
 
 /* 콜라보 박스 이미지 영역 ---------------------------------------------------------- */
 .collabo_img {
@@ -444,7 +464,8 @@ h1 a {
 .footer_upper_list h2 {
   float: right;
   width: 140px; height: 100%;
-  background-color: #acf;
+  background-image: url(../../img/footbox/sub_logo_white.png);
+  background-repeat: no-repeat;
 }
 .fnb {
   float: left;
@@ -472,7 +493,7 @@ h1 a {
   width: 100%; height: 66px;
   margin-bottom: 9px;
   font-size: 15px; line-height: 22px;
-  font-weight: 400;
+  font-weight: 100;
   color: #fff;
 }
 .info_area dl {
@@ -490,7 +511,6 @@ h1 a {
   width: 1262px; height: 88px;
   margin: auto; margin-top: 74px;
   margin-bottom: 67px;
-  background-color: #eee;
 }
 .footer_middle_area ul {
   width: 100%; height: 100%;
@@ -500,14 +520,49 @@ h1 a {
   float: left;
   margin-right: 0;
 }
+.footer_middle_area li h3 {
+  width: auto; height: 28px;
+  font-size: 20px; font-family: 'Abril Fatface', cursive;
+  line-height: 28px; letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #fff;
+}
+/* .pandora_icon {
+  float: left;
+  width: 52px; height: 68px;
+  background-image: url(../../img/footbox/pandora_icon.png);
+} */
 .sns_area {
   width: 388px; height: 100%;
   border-right: 1px solid #fff;
 }
+.sns_list li {
+  width: 38px; height: 38px;
+  margin-right: 22px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+}
+.sns_list li a {
+  display: block;
+  width: 100%; height: 100%;
+}
+.sns_list li:nth-child(1) { background-image: url(../../img/footbox/facebook.png); }
+.sns_list li:nth-child(2) { background-image: url(../../img/footbox/youtube.png); }
+.sns_list li:nth-child(3) { background-image: url(../../img/footbox/pinterest.png); }
+.sns_list li:nth-child(4) { margin-right: 0; background-image: url(../../img/footbox/instagram.png); }
+
 .change_location_area {
   width: 400px; height: 100%;
   margin-left: 87px;
   border-right: 1px solid #fff;
+}
+.footer_middle_area li select {
+  width: 232px; height: 38px;
+  margin-top: 7px;
+  border-radius: 5px;
+  text-align: center; font-size: 15px;
+  background-color: #c4c4c4;
 }
 .search_store_area {
   width: 300px; height: 100%;
