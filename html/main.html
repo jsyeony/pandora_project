@@ -35,16 +35,28 @@
           <div class="unb">
             <h3 class="blind">user navigation bar</h3>
             <ul>
-              <li class="right_side_unb"><a href="./login.html"><span class="blind">mypage</span></a></li>
-              <li class="right_side_unb"><a href="#"><span class="blind">매장 찾기</span></a></li>
+              <li class="right_side_unb">
+                <a href="./login.html">
+                  <span class="blind">mypage</span>
+                  <i class="far fa-user"></i>
+                </a>
+              </li>
+              <li class="right_side_unb">
+                <a href="#">
+                  <span class="blind">매장 찾기</span>
+                  <i class="fas fa-map-marker-alt"></i>
+                </a>
+            </li>
               <li class="right_side_unb">
                 <button type="button">
                   <span class="blind">위시리스트 작성/편집</span>
+                  <i class="far fa-heart"></i>
                 </button>
               </li>
               <li class="shop_now">
                 <a href="https://kr.pandora.net/main/main.asp" title="original pandora shop">
                   <span class="blind">지금 바로 구매하기</span>
+                  <i class="fas fa-shopping-bag"></i>
                 </a>
               </li>
             </ul>
@@ -63,15 +75,17 @@
               <li><a href="#">Universe</a></li>
             </ul>
           </div>
-          <div class="total_search">
-            <i></i>
-          </div>
+          <button class="total_search">
+            <i class="fas fa-search"></i>
+          </button>
         </nav>
       </div>
     </header>
     <section id="slideBox">
       <h2 class="blind">판도라 브랜드 슬라이드 광고 배너</h2>
-      <div class="banner_img"></div>
+      <div class="banner_img">
+        <a href="#"></a>
+      </div>
       <div class="slide_btn_area">
         <button type="button" class="next_btn">
           <span class="blind">next</span>
@@ -83,7 +97,7 @@
       <div class="slide_indicator">
         <ul>
           <li><a href="#"><span class="blind">첫번째 슬라이드 광고</span></a></li>
-          <li><a href="#"><span class="blind">두번째 슬라이드 광고</span></a></li>
+          <li class="on"><a href="#"><span class="blind">두번째 슬라이드 광고</span></a></li>
           <li><a href="#"><span class="blind">세번째 슬라이드 광고</span></a></li>
         </ul>
       </div>
@@ -100,7 +114,10 @@
         <div class="sub_contents_area">
           <h3>pandora me</h3>
           <p>룩을 리믹스 하세요.</p>
-          <a href="#">더보기</a>
+          <a href="#">
+            더보기
+            <i class="far fa-arrow-alt-circle-right"></i>
+          </a>
         </div>
       </div>
       <div class="new_product_img"></div>
@@ -152,7 +169,10 @@
     <section id="subBox">
       <div class="subbox_contents_area">
         <h2>2022 <span class="capitalize_name">pandora</span> Club Charm</h2>
-        <a href="#">더보기</a>
+        <a href="#">
+          더보기
+          <i class="fas fa-plus"></i>
+        </a>
       </div>
       <div class="sub_img"></div>
       <div class="sub_bg"></div>
