@@ -23,64 +23,7 @@
 <body>
   <!-- layout -->
   <div id="wrap">
-    <header id="headBox">
-      <div class="head_area">
-        <h1 class="blind_area">
-          <a href="../index.html" title="pandora jewerly brand">
-            <span>pandora jewerly</span>
-          </a>
-        </h1>
-        <nav id="navBox">
-          <h2 class="blind">page navigation</h2>
-          <div class="unb">
-            <h3 class="blind">user navigation bar</h3>
-            <ul>
-              <li class="right_side_unb">
-                <a href="./login.html">
-                  <span class="blind">mypage</span>
-                  <i class="far fa-user"></i>
-                </a>
-              </li>
-              <li class="right_side_unb">
-                <a href="#">
-                  <span class="blind">매장 찾기</span>
-                  <i class="fas fa-map-marker-alt"></i>
-                </a>
-            </li>
-              <li class="right_side_unb">
-                <button type="button">
-                  <span class="blind">위시리스트 작성/편집</span>
-                  <i class="far fa-heart"></i>
-                </button>
-              </li>
-              <li class="shop_now">
-                <a href="https://kr.pandora.net/main/main.asp" title="original pandora shop">
-                  <span class="blind">지금 바로 구매하기</span>
-                  <i class="fas fa-shopping-bag"></i>
-                </a>
-              </li>
-            </ul>
-          </div>
-          <div class="gnb">
-            <h3 class="blind">global navigation bar</h3>
-            <ul class="clearfix">
-              <li><a href="#">신제품 출시</a></li>
-              <li><a href="#">참</a></li>
-              <li><a href="#">반지</a></li>
-              <li><a href="#">팔찌</a></li>
-              <li><a href="#">목걸이</a></li>
-              <li><a href="#">귀걸이</a></li>
-              <li><a href="#">컬렉션</a></li>
-              <li><a href="#">Gift</a></li>
-              <li><a href="#">Universe</a></li>
-            </ul>
-          </div>
-          <button class="total_search">
-            <i class="fas fa-search"></i>
-          </button>
-        </nav>
-      </div>
-    </header>
+    <header id="headBox"></header>
     <section id="slideBox">
       <h2 class="blind">판도라 브랜드 슬라이드 광고 배너</h2>
       <div class="banner_img">
@@ -96,8 +39,8 @@
       </div>
       <div class="slide_indicator">
         <ul>
-          <li><a href="#"><span class="blind">첫번째 슬라이드 광고</span></a></li>
-          <li class="on"><a href="#"><span class="blind">두번째 슬라이드 광고</span></a></li>
+          <li class="on"><a href="#"><span class="blind">첫번째 슬라이드 광고</span></a></li>
+          <li><a href="#"><span class="blind">두번째 슬라이드 광고</span></a></li>
           <li><a href="#"><span class="blind">세번째 슬라이드 광고</span></a></li>
         </ul>
       </div>
@@ -205,10 +148,26 @@
       </div>
       <div class="collabo_indicator">
         <ul>
-          <li><span class="blind">첫번째 판도라와 브랜드 콜라보 사진</span></li>
-          <li><span class="blind">두번째 판도라와 브랜드 콜라보 사진</span></li>
-          <li><span class="blind">세번째 판도라와 브랜드 콜라보 사진</span></li>
-          <li><span class="blind">네번째 판도라와 브랜드 콜라보 사진</span></li>
+          <li class="on">
+            <a href="#">
+              <span class="blind">첫번째 판도라와 브랜드 콜라보 사진</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="blind">두번째 판도라와 브랜드 콜라보 사진</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="blind">세번째 판도라와 브랜드 콜라보 사진</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <span class="blind">네번째 판도라와 브랜드 콜라보 사진</span>
+            </a>
+          </li>
         </ul>
         <p><em>1</em> / <span>4</span></p>
       </div>
@@ -241,9 +200,45 @@
       </div>
       <div class="footer_middle_area">
         <ul>
-          <li class="sns_area"></li> 
-          <li class="change_location_area"></li>
-          <li class="search_store_area"></li>
+          <li class="sns_area">
+            <h3>follow pandora</h3>
+            <div class="pandora_icon"></div>
+            <ul class="sns_list">
+              <li>
+                <a href="https://www.facebook.com/watch/PandoraMalaysia/">
+                  <span class="blind">facebook icon</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.youtube.com/user/TheOfficialPandora">
+                  <span class="blind">youtube icon</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.pinterest.co.kr/officialpandora/_created/">
+                  <span class="blind">pinterest icon</span>
+                </a>
+              </li>
+              <li>
+                <a href="https://www.instagram.com/theofficialpandora/">
+                  <span class="blind">instagram icon</span>
+                </a>
+              </li>
+            </ul>
+          </li> 
+          <li class="change_location_area">
+            <h3>change location</h3>
+            <div class="map_icon"></div>
+            <label for="location" class="blind">change location</label>
+            <select name="location" id="location">
+              <option value="#">Change Location</option>
+              <option value="#">Change Location</option>
+              <option value="#">Change Location</option>
+            </select>
+          </li>
+          <li class="search_store_area">
+            <h3>search pandora store</h3>
+          </li>
         </ul>
       </div>
       <div class="sub_fnb">
@@ -261,5 +256,8 @@
     </footer>
   </div>
   <!-- javascript -->
+  <script src="../js/common/jquery-3.6.0.min.js"></script>
+  <script src="../js/common/jquery-ui.min.js"></script>
+  <script src="../js/src/main_import_data.js"></script>
 </body>
 </html>
