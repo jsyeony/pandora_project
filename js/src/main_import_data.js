@@ -18,4 +18,12 @@
   footBox.load(baseUrl + importPage[1]);
 
 
+  // 메인영역 불러오기 --------------------------------------------
+  var slideBox = $('#slideBox');
+  var mainBaseUrl = '../page/main/'
+  var importMainPage = ['slideBox.html'];
+
+  // 기능수행
+  slideBox.load(mainBaseUrl + importMainPage[0]);
+
 })(jQuery);
