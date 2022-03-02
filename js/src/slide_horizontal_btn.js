@@ -20,6 +20,7 @@
   var indiArea = slideSet.find('.slide_indicator');
   var indiUl = indiArea.children('ul');
   var indiLi = indiUl.children('li');
+  var indiLink = indiLi.children('a');
 
   var slideArea = slideSet.find('.slide');
   var slideWrapper = slideArea.children('div');
@@ -85,7 +86,7 @@
   slideWrapper.css({'width': ( 100 * newSlideLen ) + '%', 'left' : -100 + '%' });
   newSlideDiv.css({'width' : ( 100 / newSlideLen ) + '%' });
 
-  // slideGoFn();
+  slideGoFn();
 
   // 이벤트 ======================================================================
   nextBtn.on('click', function(e){
@@ -99,13 +100,20 @@
     indicatorFn();
   });
 
-  // slideSet.on('mouseenter', function(){
-  //   slideStopFn();
-  // });
+  indiLink.on('click', function(e){
+    e.preventDefault();
+    i = $(this).parent().index();
+    slideWrapper.stop().animate({'marginLeft' : -100 * i + '%'});
+    indicatorFn();
+  });
 
-  // slideSet.on('mouseleave', function(){
-  //   slideGoFn();
-  // });
+  slideSet.on('mouseenter', function(){
+    slideStopFn();
+  });
+
+  slideSet.on('mouseleave', function(){
+    slideGoFn();
+  });
 
 
 })(jQuery);
