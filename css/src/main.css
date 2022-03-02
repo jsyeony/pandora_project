@@ -172,8 +172,8 @@ h1 a {
 #slideBox {
   position: relative;
   left: 50%;
-  width: 100vw; height: 60vh;
-  margin: auto; 
+  width: 1920px; height: 600px;
+  margin: auto; overflow: hidden;
   transform: translateX(-50%);
   /* max-width: 1920px; height: 50vh; */
 }
@@ -192,9 +192,8 @@ h1 a {
 .slide_wrapper > div {
   float: left;
   top: 0; left: 0;
-  width: 33.333333%; height: 60vh;
+  width: 33.333333%; height: 100%;
   margin: auto;
-  background-image: url(../../img/slidebox/main_banner_01.jpg);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
