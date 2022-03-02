@@ -1,19 +1,35 @@
 <h2 class="blind">판도라 브랜드 슬라이드 광고 배너</h2>
-<div class="banner_img">
-  <a href="#"></a>
+<div class="slide_set">
+  <div class="slide_btn_area">
+    <button type="button" class="next_btn">
+      <span class="blind">next</span>
+    </button>
+    <button type="button" class="prev_btn">
+      <span class="blind">prev</span>
+    </button>
+  </div>
+
+  <div class="slide_indicator">
+    <ul>
+      <li class="on"><a href="#slide_01"><span class="blind">첫번째 슬라이드 광고</span></a></li>
+      <li><a href="#slide_02"><span class="blind">두번째 슬라이드 광고</span></a></li>
+      <li><a href="#slide_03"><span class="blind">세번째 슬라이드 광고</span></a></li>
+    </ul>
+  </div>
+
+  <div class="slide">
+    <div class="slide_wrapper">
+      <div id="slide_01" class="banner_img_01">
+        <span class="blind">슬라이드 광고 배너 사진 01</span>
+      </div>
+      <div id="slide_02" class="banner_img_02">
+        <span class="blind">슬라이드 광고 배너 사진 02</span>
+      </div>
+      <div id="slide_03" class="banner_img_03">
+        <span class="blind">슬라이드 광고 배너 사진 03</span>
+      </div>
+    </div>
+  </div>  
 </div>
-<div class="slide_btn_area">
-  <button type="button" class="next_btn">
-    <span class="blind">next</span>
-  </button>
-  <button type="button">
-    <span class="blind">prev</span>
-  </button>
-</div>
-<div class="slide_indicator">
-  <ul>
-    <li class="on"><a href="#"><span class="blind">첫번째 슬라이드 광고</span></a></li>
-    <li><a href="#"><span class="blind">두번째 슬라이드 광고</span></a></li>
-    <li><a href="#"><span class="blind">세번째 슬라이드 광고</span></a></li>
-  </ul>
-</div>
+<!-- javascript -->
+<script src="../../js/src/slide_horizontal_btn.js"></script>
