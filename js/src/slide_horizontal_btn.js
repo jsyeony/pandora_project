@@ -36,7 +36,7 @@
   var slideGoFn = function(){
     play = setInterval(function(){
       nextBtn.trigger('click', timed);
-    }, timed * 3);
+    }, timed * 8);
   };
 
   var slideStopFn = function(){
