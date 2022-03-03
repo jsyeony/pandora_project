@@ -12,18 +12,18 @@
 }
 /* 로고 ----------------------------------------------------------------------- */
 h1 {
-  position: absolute;
+  position: absolute; z-index: 1000;
   top: 0; left: 0; right: 0;
   width: 340px; height: 60px;
-  margin: auto; padding-top: 30px;
-  background-image: url(../../img/headbox/pandora_logo.png);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: contain;
+  margin: auto; padding-top: 20px;
 }
 h1 a {
   display: block;
   width: 100%; height: 100%;
+  background-image: url(../../img/headbox/pandora_logo.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
 }
 
 /* unb ------------------------------------------------------------------------ */
@@ -247,6 +247,7 @@ h1 a {
 .slide_indicator li:hover { background-color: #E98987; }
 
 /* ------------------------------------------------------------------------------------------- */
+/* 판도라 신제품 광고 영역 -------------------------------------------------------------------------- */
 #newBox {
   position: relative;
   width: 100%; height: 72rem;
@@ -316,31 +317,135 @@ h1 a {
 .newbox_btn_area {
   position: absolute;
   top: 770px; left: 0; right: 0;
-  width: 1320px; height: 60px;
+  width: 1320px; height: 0;
   margin: auto;
-  background-color: #fcf;
 }
 .newbox_btn_area button {
   width: 60px; height: 60px;
-  background-color: #fff;
+  background-image: url('../../img/newbox/arrow_btn_left.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: 50% 50%;
 }
+.newbox_btn_area button:hover { opacity: 0.7; }
 
 /* 제품 모달 리스트 --------------------------------------------------------------- */
-.product_modal_list {
+.product_modal_list_wrapper {
   width: 1260px; height: 290px;
   margin: auto;
   background-color: #ccc;
 }
-.product_modal_list ul {
+.new_product {
+  float: left;
+  width: 236px; height: auto;
+  margin-right: 20px;
+}
+.product_modal_list_wrapper button {
+  width: 236px; height: 250px;
+  background-color: #ddd;
+}
+.product_modal_list_wrapper p {
+  width: 236px; height: auto;
+  margin-top: 15px;
+  font-size: 15px; font-weight: 100;
+  text-align: center; line-height: 22px;
+}
+.new_product:nth-of-type(5n) { margin-right: 0; }
+
+/* 모달 윈도우 파트 ------------------------------------------------- */
+.modal_window {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+  /* background-color: #eee; */
+}
+.modal_data {
+  position: absolute; z-index: 200;
+  top: 0; bottom: 0; left: 0; right: 0;
+  width: 850px; height: 450px;
+  margin: auto; border-radius: 8px;
+  background-color: #fff;
+}
+/* 모달 윈도우 닫기 버튼 -------------------------------------------- */
+.close_btn {
+  float: right;
+  width: 50px; height: 50px;
+}
+.close_btn button {
+  width: 100%; height: 100%;
+  font-size: 25px;
+}
+.close_btn:hover { background-color: #eee; }
+
+/* 모달 윈도우 내용 부분 -------------------------------------------- */
+.modal_content {
   width: 100%; height: 100%;
 }
-.product_modal_list li {
+.modal_img {
   float: left;
-  width: 236px; height: 290px;
-  margin-right: 20px;
-  background-color: #666;
+  width: 450px; height: 100%;
+  border-right: 1px solid #ddd; box-sizing: border-box;
+  background-image: url(../../img/newbox/new_product_01.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
 }
-.product_modal_list li:last-child { margin-right: 0; }
+.modal_product_data {
+  float: right; position: relative;
+  width: 400px; height: 400px;
+  padding-left: 20px; padding-right: 30px;
+  box-sizing: border-box;
+}
+.modal_product_data h4 {
+  width: auto; height: auto;
+  font-size: 22px;
+}
+.modal_product_data h5 {
+  width: auto; height: auto;
+  margin-top: 7px; margin-bottom: 20px;
+  font-size: 14px; font-weight: 100;
+}
+.modal_product_data p {
+  width: auto; height: auto;
+  line-height: 24px;
+}
+.modal_price {
+  position: absolute; bottom: 100px;
+  right: 0; left: 0;
+  width: auto; height: auto;
+  margin: auto;
+  text-align: center; font-size: 22px;
+}
+
+/* 모달 윈도우 버튼 부분 --------------------------------------------- */
+.modal_button_area {
+  position: absolute; bottom: 0; right: 0;
+  width: 100%; height: 60px;
+  background-color: #fff;
+}
+.modal_wish {
+  float: left;
+  width: 80px; height: 100%;
+  font-size: 30px;
+  background-color: #eee;
+}
+.modal_wish:hover { background-color: #ccc; }
+
+.modal_buy {
+  float: right;
+  width: 320px; height: 100%;
+  text-align: center; font-size: 20px;
+  font-weight: 700; color: #fff;
+  background-color: #f2a1b2;
+}
+.modal_buy:hover { background-color: #E98987; }
+
+/* 모달 윈도우 뒷 배경 부분 ------------------------------------------ */
+.modal_bg {
+  position: absolute; left: 50%; z-index: 0;
+  width: 1920px; height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  transform: translateX(-50%);
+}
 
 /* ------------------------------------------------------------------------------------------- */
 #subBox {
@@ -530,7 +635,7 @@ h1 a {
 .collabo_indicator p {
   float: right;
   width: 35px; height: 100%;
-  padding-right: 20px;
+  margin-top: -20px; padding-right: 20px;
   text-align: right;
 }
 
