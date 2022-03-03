@@ -20,10 +20,12 @@
 
   // 메인영역 불러오기 --------------------------------------------
   var slideBox = $('#slideBox');
+  var newBox = $('#newBox');
   var mainBaseUrl = '../page/main/'
-  var importMainPage = ['slideBox.html'];
+  var importMainPage = ['slideBox.html', 'newBox.html'];
 
   // 기능수행
   slideBox.load(mainBaseUrl + importMainPage[0]);
+  newBox.load(mainBaseUrl + importMainPage[1]);
 
 })(jQuery);
