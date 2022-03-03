@@ -26,7 +26,7 @@
     accorWrap.eq(i).siblings().removeClass('on');
   });
 
-  accordionArea.on('mouseleave', function(){
+  gnb.on('mouseleave', function(){
     i = $(this).index();
     accorWrap.removeClass('on');
   });
