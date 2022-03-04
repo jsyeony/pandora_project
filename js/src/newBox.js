@@ -77,17 +77,14 @@
     var modalLink = modalList.children('a');
     var permission = true;
     // 이벤트
-    modalNextBtn.on('click', function(){
-      if(permission){
-        permission = false;
-        i += 1;
-        if(i >= 3){
-          modalUl.animate({'marginLeft': 100 + '%'});
-        };
-        modalUl.stop().animate({'marginLeft' : -100 + '%'}, function(){
-          permission = true;
-        });
-      };
+    modalNextBtn.on('click', function(e){
+      e.preventDefault();
+      modalUl.animate({'marginLeft' : -100 + '%'});
+    });
+
+    modalPrevBtn.on('click', function(e){
+      e.preventDefault();
+      modalUl.animate({'marginLeft' : 100 + '%'});
     });
 
     modalLink.on('click', function(e){
