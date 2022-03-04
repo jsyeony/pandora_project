@@ -326,27 +326,41 @@ h1 a {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;
+  box-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+}
+.newbox_btn_area .next_btn {
+  box-shadow: -2px -2px 2px rgba(0,0,0,0.25);
 }
 .newbox_btn_area button:hover { opacity: 0.7; }
 
 /* 제품 모달 리스트 --------------------------------------------------------------- */
 .product_modal_list_wrapper {
+  overflow: hidden;
   width: 1260px; height: 290px;
   margin: auto;
-  background-color: #ccc;
+}
+.product_modal_list_wrapper ul {
+  width: 300%; height: 100%;
 }
 .new_product {
   float: left;
   width: 236px; height: auto;
   margin-right: 20px;
 }
-.product_modal_list_wrapper button {
-  width: 236px; height: 250px;
-  background-color: #ddd;
+.new_product a {
+  display: block;
+  width: 236px; height: 100%;
+}
+.product_image {
+  width: 100%; height: 250px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  box-shadow: 2px 2px 8px rgba(0,0,0,0.25);
 }
 .product_modal_list_wrapper p {
   width: 236px; height: auto;
-  margin-top: 15px;
+  margin-top: 10px;
   font-size: 15px; font-weight: 100;
   text-align: center; line-height: 22px;
 }
@@ -354,7 +368,7 @@ h1 a {
 
 /* 모달 윈도우 파트 ------------------------------------------------- */
 .modal_window {
-  position: absolute; top: 0; left: 0;
+  position: fixed; top: 0; left: 0; z-index: 1500;
   width: 100%; height: 100%;
   /* background-color: #eee; */
 }
@@ -384,7 +398,6 @@ h1 a {
   float: left;
   width: 450px; height: 100%;
   border-right: 1px solid #ddd; box-sizing: border-box;
-  background-image: url(../../img/newbox/new_product_01.png);
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: contain;
@@ -395,16 +408,16 @@ h1 a {
   padding-left: 20px; padding-right: 30px;
   box-sizing: border-box;
 }
-.modal_product_data h4 {
+.modal_product_data dt {
   width: auto; height: auto;
   font-size: 22px;
 }
-.modal_product_data h5 {
+.modal_product_data dd li:nth-child(1) {
   width: auto; height: auto;
   margin-top: 7px; margin-bottom: 20px;
   font-size: 14px; font-weight: 100;
 }
-.modal_product_data p {
+.modal_product_data dd li:nth-child(2) {
   width: auto; height: auto;
   line-height: 24px;
 }
@@ -421,6 +434,9 @@ h1 a {
   position: absolute; bottom: 0; right: 0;
   width: 100%; height: 60px;
   background-color: #fff;
+}
+.modal_button_area form {
+  width: 100%; height: 100%;
 }
 .modal_wish {
   float: left;
