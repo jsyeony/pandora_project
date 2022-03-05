@@ -43,6 +43,8 @@
     clearInterval(play);
   };
 
+  // 현재 다음버튼을 눌렀을때 마지막 슬라이드에서 첫번째 슬라이드로 다시 되돌아가는 시점에서 흰 배경이 뜨는, 오류 존재
+  // 이전 버튼을 눌러서 첫번째 슬라이드에서 마지막 슬라이드로 갈때는 이슈가 없음
   var nextBtnFn = function(){
     if(permission){
       permission = false;
