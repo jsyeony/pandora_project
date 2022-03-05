@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- login.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Jua&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../fonts/fontawesome5/css/all.min.css">
+
+  <link rel="stylesheet" href="../css/common/reset.css">
+  <link rel="stylesheet" href="../css/common/common.css">
+  <link rel="stylesheet" href="../css/src/login.css">
+  
+  <link rel="shortcut icon" href="../favicon.png" type="image/png">
+
+  <title>login</title>
+</head>
+<body>
+  <!-- layout -->
+  <div id="wrap">
+    <header id="headBox"></header>
+
+    <section id="loginBox">
+      <h2><span class="blind">판도라 주얼리 사용자 로그인 및 회원가입 페이지</span></h2>
+      <div class="login_area">
+        <div class="login_content">
+          <div class="login_part">
+            <form action="#" method="POST">
+              <fieldset>
+                <legend>사용자 계정 및 비밀번호 입력</legend>
+                <div class="user_input">
+                  <label for="userMail">
+                    <span class="blind">사용자 로그인을 위한 계정 이메일 주소를 입력하세요.</span>
+                  </label>
+                  <input type="email" id="userMail" name="userMail" value=""
+                         placeholder="이메일" required />
+                </div>
+                <div class="user_input">
+                  <label for="userPw">
+                    <span class="blind">사용자의 로그인 비밀번호를 입력하세요.</span>
+                  </label>
+                  <input type="password" id="userPw" name="userPw" value=""
+                         placeholder="비밀번호" required />
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>로그인 버튼 및 페이스북으로 로그인하기</legend>
+                <div class="login_btn">
+                  <input type="submit" value="로그인" />
+                </div>
+                <div class="login_btn">
+                  <a href="#"><span>facebook</span>으로 로그인</a>
+                </div>
+              </fieldset>
+              <fieldset>
+                <legend>판도라 주얼리 회원 가입하기</legend>
+                <div class="join_btn">
+                  <a href="#">회원 가입</a>
+                </div>
+              </fieldset>
+            </form>
+          </div>
+          <div class="login_img"></div>
+        </div>
+      </div>
+    </section>
+
+    <footer id="footBox"></footer>
+  </div>
+  <!-- javascript -->
+  <script src="../js/common/jquery-3.6.0.min.js"></script>
+  <script src="../js/common/jquery-ui.min.js"></script>
+  <script src="../js/src/login_import_data.js"></script>
+</body>
+</html>
