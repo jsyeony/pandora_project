@@ -49,3 +49,14 @@ header,article,section,footer,nav,aside,figure,figcaption,main {
 }
 
 address, i { font-style: normal; }
+
+/* --------------------------------------------------- */
+form,fieldset {
+  margin: 0; padding: 0; border: 0;
+}
+legend {
+  display: block;
+  width: 0; height: 0;
+  position: absolute; z-index: -1;
+  overflow: hidden;
+}
