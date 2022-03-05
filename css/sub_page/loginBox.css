@@ -1,0 +1,37 @@
+/* loginBox.css */
+
+#loginBox {
+  width: 1920px; height: 780px;
+  padding-top: 10.3125rem;
+  background-color: #F5F5F7;
+}
+.login_area {
+  position: relative;
+  width: 960px; height: 620px;
+  margin: auto; margin-top: 80px;
+  background-color: #fff;
+}
+.login_content {
+  position: absolute; 
+  top: 0; bottom: 0; left: 0; right: 0;
+  width: 660px; height: 456px;
+  margin: auto;
+  background-color: #eee;
+}
+.login_part {
+  float: left;
+  width: 260px; height: 415px;
+  margin-top: 20px;
+  background-color: #ccc;
+}
+.login_img {
+  float: right;
+  width: 330px; height: 100%;
+  box-sizing: border-box;
+  border: 10px solid #FFE3E3;
+  border-radius: 8px;
+  background-image: url('../../img/loginbox/login_img.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50% 50%;
+}
