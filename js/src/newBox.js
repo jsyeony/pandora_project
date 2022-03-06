@@ -48,7 +48,7 @@
     var prData = data;
     var listContent, modalImg;
     var dataLen = data.length;
-    
+
     // 함수
     var fnList = function(imgNarr, price){
       return '<li class="new_product"><a href="#"><div class="product_image"><span class="blind">'+imgNarr+'</span></div><p>'+'&#8361;'+price+'</p></a></li>';
@@ -62,31 +62,40 @@
       modalImg.css({'backgroundImage':'url('+imgUrl+prData[i].image+')'});
     };
 
-    var modalWinFn = function(i){
-      for(var i=0; i < dataLen; i += 1){
-        modalWinImg.eq(i).append(prListData.image);
-        modalDt.eq(i).append(prListData.product);
-        modalPrNum.eq(i).append(prListData.number);
-        modalPrNarr.eq(i).append(prListData.contents);
-        modalPrice.eq(i).append(prListData.price);
-      };
-    }
 
     // 변형 변수
     var modalList = modalUl.children('li');
     var modalLink = modalList.children('a');
-    var permission = true;
+    var x = 0;
+    
+    // 함수
+    var modalCloseFn = function(){
+      modalWinImg.empty();
+      modalDt.empty();
+      modalPrNum.empty();
+      modalPrNarr.empty(); 
+      modalPrice.empty();
+    };
+
     // 이벤트
+    // 모달 리스트 버튼 클릭 이벤트 ======================================================
     modalNextBtn.on('click', function(e){
       e.preventDefault();
-      modalUl.animate({'marginLeft' : -100 + '%'});
+      if(x > -2){
+        x -= 1;
+        modalUl.animate({'marginLeft' : (100*x) + '%'});
+      };
     });
 
     modalPrevBtn.on('click', function(e){
       e.preventDefault();
-      modalUl.animate({'marginLeft' : 100 + '%'});
+      if(x < 0){
+        x += 1;
+        modalUl.animate({'marginLeft' : (100*x) + '%'});
+      };
     });
 
+    // 모달 리스트 클릭 이벤트 ============================================================
     modalLink.on('click', function(e){
       e.preventDefault();
       var idx = $(this).parent().index();
@@ -101,18 +110,11 @@
       modalWindow.removeClass('none');
     });
 
+    // 모달 윈도우 클로즈 버튼 클릭 이벤트 =================================================
     closeBtn.on('click', function(e){
       e.preventDefault();
-      var idx = $(this).parent().index();
-      var prListData = prData[idx];
-      
       modalWindow.addClass('none');
-
-      modalWinImg.css({'backgroundImage':'none'});
-      modalDt.remove();
-      modalPrNum.remove();
-      modalPrNarr.remove(); 
-      modalPrice.remove();
+      modalCloseFn();
     });
 
 
