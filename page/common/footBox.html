@@ -26,8 +26,8 @@
 <div class="footer_middle_area">
   <ul>
     <li class="sns_area">
-      <h3>follow pandora</h3>
       <div class="pandora_icon"></div>
+      <h3>follow pandora</h3>
       <ul class="sns_list">
         <li>
           <a href="https://www.facebook.com/watch/PandoraMalaysia/">
@@ -52,17 +52,20 @@
       </ul>
     </li> 
     <li class="change_location_area">
-      <h3>change location</h3>
       <div class="map_icon"></div>
-      <label for="location" class="blind">change location</label>
-      <select name="location" id="location">
-        <option value="#">Change Location</option>
-        <option value="#">Change Location</option>
-        <option value="#">Change Location</option>
-      </select>
+      <div class="change_location">
+        <h3>change location</h3>
+        <a href="#">
+          <div class="korea_flag"></div>
+          <span>Change Location</span>
+        </a>
+      </div>
     </li>
     <li class="search_store_area">
       <h3>search pandora store</h3>
+      <label for="searchStore" class="blind">가까운 pandora 스토어를 검색해보세요.</label>
+      <input type="text" id="searchStore" name="searchStore" placeholder="우편번호/시/도" />
+      <button type="submit"><i class="fas fa-search"></i></button>
     </li>
   </ul>
 </div>
