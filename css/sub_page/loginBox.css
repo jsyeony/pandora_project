@@ -1,14 +1,14 @@
 /* loginBox.css */
 /* loginBox 공통 영역 ============================================================*/
 #loginBox {
-  width: 1920px; height: 780px;
+  width: 1920px; height: 700px;
   padding-top: 10.3125rem;
   background-color: #F5F5F7;
 }
 .login_area {
   position: relative; left: 50%;
   width: 960px; height: 620px;
-  margin-top: 80px;
+  margin-top: 40px;
   border-radius: 10px;
   background-color: #fff;
   transform: translateX(-50%);
