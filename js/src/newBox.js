@@ -41,6 +41,8 @@
   var closeBtnArea = modalWindow.find('.close_btn');
   var closeBtn = closeBtnArea.children('button');
 
+  var timed = 1000;
+
   // 기본 수행
   $.getJSON(dataUrl, function(data){
      
@@ -50,13 +52,13 @@
     var dataLen = data.length;
 
     // 함수
-    var fnList = function(imgNarr, price){
-      return '<li class="new_product"><a href="#"><div class="product_image"><span class="blind">'+imgNarr+'</span></div><p>'+'&#8361;'+price+'</p></a></li>';
+    var fnList = function(productName, imgNarr, price){
+      return '<li class="new_product"><div class="product_name">'+productName+'</div><a href="#"><div class="product_image"><span class="blind">'+imgNarr+'</span></div><p>'+'&#8361;'+price+'</p></a></li>';
     };
 
     // 기본실행
     for(var i=0; i < dataLen; i += 1){
-      listContent = fnList(prData[i].description, prData[i].price);
+      listContent = fnList(prData[i].product, prData[i].description, prData[i].price);
       modalUl.append(listContent);
       modalImg = modalUl.children('li').eq(i).find('.product_image');
       modalImg.css({'backgroundImage':'url('+imgUrl+prData[i].image+')'});
@@ -67,15 +69,20 @@
     var modalList = modalUl.children('li');
     var modalLink = modalList.children('a');
     var x = 0;
-    
-    // 함수
+    var modalProduct = modalList.find('.product_name');
+
+    // 기본 실행
+    // 모달리스트의 제품명은 마우스를 올리거나 포커스가 잡히지 않는 경우 보이지 않도록 기본적으로 숨겨놓음.
+    modalProduct.hide();
+
+    // 함수 ===========================================================================
     var modalCloseFn = function(){
       modalWinImg.empty();
       modalDt.empty();
       modalPrNum.empty();
       modalPrNarr.empty(); 
       modalPrice.empty();
-    };
+    }; // modalCloseFn()
 
     // 이벤트
     // 모달 리스트 버튼 클릭 이벤트 ======================================================
@@ -96,6 +103,31 @@
     });
 
     // 모달 리스트 클릭 이벤트 ============================================================
+    // 모달 리스트에 마우스를 올렸을 때 이벤트 ------------------------
+    modalLink.on('mouseenter', function(){
+      var i = $(this).parent().index();
+      modalProduct.eq(i).stop().slideDown(timed/4);
+    });
+
+    // 모달 리스트에 마우스가 벗어났을 때 이벤트 ----------------------
+    modalLink.on('mouseleave', function(){
+      var i = $(this).parent().index();
+      modalProduct.eq(i).stop().slideUp(timed/3);
+    });
+
+    // 모달 리스트에 포커스가 됐을 때 이벤트 --------------------------
+    modalLink.on('focus', function(){
+      var i = $(this).parent().index();
+      modalProduct.eq(i).stop().slideDown(timed/4);
+    });
+
+    // 모달 리스트에 포커스가 벗어났을 때 이벤트 ----------------------
+    modalLink.on('blur', function(){
+      var i = $(this).parent().index();
+      modalProduct.eq(i).stop().slideUp(timed/3);
+    });
+
+    // 모달 리스트를 클릭했을 때 이벤트 ------------------------------
     modalLink.on('click', function(e){
       e.preventDefault();
       var idx = $(this).parent().index();
@@ -110,7 +142,7 @@
       modalWindow.removeClass('none');
     });
 
-    // 모달 윈도우 클로즈 버튼 클릭 이벤트 =================================================
+    // 모달 윈도우창의 닫기 버튼을 눌렀을 때 이벤트 =================================================
     closeBtn.on('click', function(e){
       e.preventDefault();
       modalWindow.addClass('none');
