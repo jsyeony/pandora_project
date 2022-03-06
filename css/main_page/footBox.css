@@ -1,21 +1,26 @@
-/* footBox.css */
+/* ------------------------------------------------------------------------------------------- */
 #footBox {
-  width: 100%; height: 32.125rem;
+  position: relative; left: 50%;
+  width: 100vw; height: 32.125rem;
   background-color: #505050;
+  transform: translateX(-50%);
 }
 .footer_upper_list {
   width: 1260px; height: 40px;
   margin: auto; margin-bottom: 20px;
   padding-top: 44px;
   border-bottom: 1px solid #fff;
-  /* background-color: #fff; */
 }
+
+/* 푸터 판도라 서브 로고 영역 ---------------------------------------- */
 .footer_upper_list h2 {
   float: right;
   width: 140px; height: 100%;
   background-image: url(../../img/footbox/sub_logo_white.png);
   background-repeat: no-repeat;
 }
+
+/* 푸터 네비게이션 바 ------------------------------------------------ */
 .fnb {
   float: left;
   width: 542px; height: 100%;
@@ -34,9 +39,11 @@
   display: block;
   width: 100%; height: 100%;
 }
+
+/* 회사 정보 영역란 =========================================================================== */
 .info_area {
-  width: 322px; height: 110px;
-  padding-left: 88px;
+  width: 1260px; height: 110px;
+  margin: auto;
 }
 .info_area p {
   width: 100%; height: 66px;
@@ -56,10 +63,17 @@
 .info_area dl dd {
   float: right;
 }
+
+/* 푸터 중간 영역 리스트 ========================================================================= */
 .footer_middle_area {
   width: 1262px; height: 88px;
   margin: auto; margin-top: 74px;
   margin-bottom: 67px;
+}
+.footer_middle_area div {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
 }
 .footer_middle_area ul {
   width: 100%; height: 100%;
@@ -76,14 +90,19 @@
   text-transform: uppercase;
   color: #fff;
 }
-/* .pandora_icon {
+/* sns area part ------------------------------------------------------- */
+.pandora_icon {
   float: left;
   width: 52px; height: 68px;
+  margin-right: 30px; margin-top: 8px;
   background-image: url(../../img/footbox/pandora_icon.png);
-} */
+}
 .sns_area {
   width: 388px; height: 100%;
   border-right: 1px solid #fff;
+}
+.sns_list {
+  width: 220px; height: 38px;
 }
 .sns_list li {
   width: 38px; height: 38px;
@@ -101,22 +120,71 @@
 .sns_list li:nth-child(3) { background-image: url(../../img/footbox/pinterest.png); }
 .sns_list li:nth-child(4) { margin-right: 0; background-image: url(../../img/footbox/instagram.png); }
 
+.sns_list li:hover { transform: scale(120%); }
+
+/* change location area ----------------------------------------------------------------- */
 .change_location_area {
   width: 400px; height: 100%;
   margin-left: 87px;
   border-right: 1px solid #fff;
 }
-.footer_middle_area li select {
+.map_icon {
+  float: left; 
+  width: 60px; height: 38px;
+  margin-top: 18px; margin-right: 20px;
+  background-image: url('../../img/footbox/map_icon.png');
+}
+.change_location {
+  float: left;
   width: 232px; height: 38px;
+}
+.change_location a {
+  display: block; position: relative;
+  width: 100%; height: 100%;
   margin-top: 7px;
   border-radius: 5px;
-  text-align: center; font-size: 15px;
   background-color: #c4c4c4;
 }
+.change_location span {
+  position: absolute; right: 28px;
+  text-align: center; font-size: 15px;
+  line-height: 38px;
+}
+.korea_flag {
+  position: absolute; top: 7px; left: 42px;
+  width: 34px; height: 24px;
+  background-image: url('../../img/footbox/korea_flag.png');
+}
+.change_location a:hover { background-color: #fff; }
+
+/* 판도라 스토어 찾기 부분 ------------------------------------------------------- */
 .search_store_area {
+  position: relative;
   width: 300px; height: 100%;
   margin-left: 77px;
 }
+.search_store_area input {
+  width: 300px; height: 38px;
+  margin-top: 7px;
+  border-radius: 5px;
+  border: 0;
+  text-indent: 10px;
+  background-color: #c4c4c4;
+}
+.search_store_area button {
+  position: absolute; bottom: 6px; right: 0;
+  width: 40px; height: 38px;
+  border-radius: 5px;
+}
+.search_store_area i {
+  font-size: 22px;
+}
+.search_store_area input:hover { background-color: #fff; }
+.search_store_area input:focus { background-color: #fff; }
+
+.search_store_area button:hover { background-color: #fff; }
+
+/* 푸터 맨 하단 서브 네비게이션 바 ---------------------------------------------------- */
 .sub_fnb {
   width: 1262px; height: 35px;
   margin: auto;
