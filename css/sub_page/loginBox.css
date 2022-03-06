@@ -1,29 +1,159 @@
 /* loginBox.css */
-
+/* loginBox 공통 영역 ============================================================*/
 #loginBox {
   width: 1920px; height: 780px;
   padding-top: 10.3125rem;
   background-color: #F5F5F7;
 }
 .login_area {
-  position: relative;
+  position: relative; left: 50%;
   width: 960px; height: 620px;
-  margin: auto; margin-top: 80px;
+  margin-top: 80px;
+  border-radius: 10px;
   background-color: #fff;
+  transform: translateX(-50%);
+  box-shadow: 5px 5px 5px rgba(0,0,0,0.25);
 }
 .login_content {
   position: absolute; 
   top: 0; bottom: 0; left: 0; right: 0;
   width: 660px; height: 456px;
   margin: auto;
-  background-color: #eee;
 }
+
+/* login 영역 ==================================================================== */
 .login_part {
   float: left;
   width: 260px; height: 415px;
   margin-top: 20px;
-  background-color: #ccc;
 }
+.login_part > p {
+  width: 100%; height: auto;
+  margin-bottom: 25px;
+  text-align: center;
+  color: #333;
+}
+
+/* 아이디와 비밀번호 입력 창 관련 ================================================= */
+.login_part fieldset {
+  width: 100%; height: 106px;
+}
+.user_input {
+  width: 260px; height: 45px;
+  margin-bottom: 16px;
+  background-color: #fff;
+}
+.user_input input {
+  width: 260px; height: 100%;
+  box-sizing: border-box;
+  text-indent: 10px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid #999;
+}
+.login_part > form > a {
+  display: block;
+  width: 100%; height: auto;
+  margin-top: 8px; margin-bottom: 22px;
+  font-size: 12px;
+  color: #c4c4c4;
+}
+
+/* 로그인 버튼 관련 ==================================================================== */
+.login_part form > p {
+  position: relative;
+  width: auto; height: auto;
+  margin-top: 20px; margin-bottom: 22px;
+  font-size: 12px;
+  text-align: center;
+}
+.login_part form > p::before {
+  position: absolute;
+  top: 50%; left: 0;
+  content: ""; display: block;
+  width: 65px; height: 1px;
+  background-color: #c4c4c4;
+}
+.login_part form > p::after {
+  position: absolute;
+  top: 50%; right: 0;
+  content: ""; display: block;
+  width: 65px; height: 1px;
+  background-color: #c4c4c4;
+}
+.login_btn {
+  width: 100%; height: 45px;
+}
+.login_btn input {
+  width: 100%; height: 45px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  font-size: 14px;
+  color: #fff;
+  background-color: #333;
+  cursor: pointer;
+}
+
+/* login btn hover&focus -------------------------------- */
+.login_btn input:hover {
+  font-weight: 700;
+  color: #333;
+  background-color: #ddd;
+}
+.login_btn input:focus {
+  font-weight: 700;
+  color: #333;
+  background-color: #ddd;
+}
+
+/* 페이스북으로 로그인하기 버튼 css -------------------------------------- */
+.login_btn a {
+  display: block;
+  width: 100%; height: 45px;
+  margin-top: 15px;
+  text-align: center; line-height: 45px;
+  font-size: 14px;
+  border: 1px solid #333;
+  border-radius: 5px;
+  color: #fff;
+  background-color: #4065B4;
+}
+.login_btn span {
+  text-transform: uppercase;
+}
+/* facebook login hover&focus -------------------------------- */
+.login_btn a:hover {
+  font-weight: 700;
+  color: #4065B4;
+  background-color: #fff;
+}
+.login_btn a:focus {
+  font-weight: 700;
+  color: #4065B4;
+  background-color: #fff;
+}
+
+/* 회원가입 버튼 관련 ======================================================================= */
+.join_btn {
+  width: 100%; height: 45px;
+}
+.join_btn a {
+  display: block;
+  width: 100%; height: 100%;
+  box-sizing: border-box;
+  border: 1px solid #999;
+  border-radius: 5px;
+  font-size: 14px;
+  text-align: center;
+  line-height: 45px;
+  background-color: #999;
+}
+.join_btn a:hover {
+  color: #fff;
+  background-color: #333;
+}
+
+/* 이미지 관련 ============================================================================== */
 .login_img {
   float: right;
   width: 330px; height: 100%;
