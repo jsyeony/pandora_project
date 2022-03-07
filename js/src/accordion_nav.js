@@ -27,7 +27,7 @@
   // 헤더 검색 아이콘 관련 이벤트 수행 ===============================================
   /*
     검색 아이콘에 마우스를 올리면 검색창 input이 나타나도록 설정
-    input에서 포커스가 벗어나면 다시 사라지도록 설정
+    input에서 포커스가 벗어나거나 검색영역을 마우스가 벗어나면 다시 사라지도록 설정
   */
   // 기본 수행
   searchInput.hide();
@@ -37,9 +37,13 @@
     searchInput.fadeIn(timed/4);
   });
 
+  searchArea.on('mouseleave', function(){
+    searchInput.fadeOut(timed/3);
+  });
+
   searchInput.on('blur', function(){
     searchInput.fadeOut(timed/3);
-  })
+  });
 
   // 아코디언메뉴를 나타내는 방법 첫번째 : addClass ====================================
 
