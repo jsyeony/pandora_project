@@ -7,7 +7,7 @@
 }
 #navBox {
   position: relative; top: 30px;
-  width: 1260px; height: 134px;
+  width: 1260px; height: 122px;
   max-width: 1440px;
   margin: auto;
 }
@@ -15,7 +15,7 @@
 h1 {
   position: absolute; z-index: 1000;
   top: 0; left: 0; right: 0;
-  width: 340px; height: 60px;
+  width: 300px; height: 60px;
   margin: auto; padding-top: 20px;
 }
 h1 a {
@@ -34,13 +34,15 @@ h1 a {
 }
 .unb > ul {
   width: 100%; height: 100%;
+  padding-top: 10px;
 }
 .unb li {
   width: 40px; height: 40px;
-  margin-right: 20px;
-  font-size: 35px; text-align: center;
+  margin-right: 30px;
+  font-size: 30px; text-align: center;
   line-height: 40px;
 }
+.unb li:first-child { margin-right: 0; line-height: 36px; }
 .unb li:nth-child(2) { line-height: 35px; }
 .unb li:last-child { margin-right: 0; }
 .right_side_unb { float: right; }
@@ -56,21 +58,22 @@ h1 a {
 /* gnb ------------------------------------------------------------------------ */
 .gnb {
   position: absolute; z-index: 100;
-  top: 60px; left: 0; right: 0;
-  width: 780px; height: auto;
+  top: 80px; left: 0; right: 0;
+  width: 780px; height: 40px;
   margin: auto;
 }
 .gnb li {
   float: left;
-  width: auto; height: 100%;
+  width: auto; height: 40px;
   margin-right: 50px;
-  line-height: 60px;
+  line-height: 20px;
   background-color: #fff;
 }
 .gnb li:last-child { margin-right: 0; }
 .gnb li > a {
   display: block;
   width: 100%; height: 100%;
+  border-radius: 5px;
 }
 
 .gnb li:hover a { background-color: #eee }
@@ -108,13 +111,12 @@ h1 a {
   font-weight: 100;
 }
 .accor_wrap {
-  display: none;
-  /* display: flex; */
+  display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%; height: 100%;
 }
-.on { display: flex; }
+/* .on { display: flex; } */
 
 .accor_wrap ul:first-of-type li { padding-left: 60px; }
 
@@ -161,9 +163,26 @@ h1 a {
 }
 
 /* 검색바 --------------------------------------------------------------------- */
-.total_search {
-  position: absolute;
-  bottom: 25px; right: 20px;
+.search_area {
+  width: 180px; height: 40px;
+}
+.search_area button {
+  position: absolute; z-index: 100;
+  bottom: 15px; right: 0;
   width: 40px; height: 40px;
-  font-size: 30px; line-height: 50px;
+  font-size: 25px; line-height: 45px;
+}
+.search_box {
+  position: absolute;
+  bottom: 15px; right: 0;
+  width: 200px; height: 40px;
+  border-radius: 5px;
+  border: 0;
+  text-indent: 10px;
+  font-size: 12px;
+  background-color: #eee;
+}
+.search_area button:hover {
+  border-radius: 20px;
+  background-color: #c4c4c4;
 }
