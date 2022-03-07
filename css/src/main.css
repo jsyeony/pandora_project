@@ -9,7 +9,7 @@
 }
 #navBox {
   position: relative; top: 30px;
-  width: 1260px; height: 134px;
+  width: 1260px; height: 122px;
   max-width: 1440px;
   margin: auto;
 }
@@ -44,6 +44,7 @@ h1 a {
   font-size: 30px; text-align: center;
   line-height: 40px;
 }
+.unb li:first-child { margin-right: 0; line-height: 36px; }
 .unb li:nth-child(2) { line-height: 35px; }
 .unb li:last-child { margin-right: 0; }
 .right_side_unb { float: right; }
@@ -59,21 +60,22 @@ h1 a {
 /* gnb ------------------------------------------------------------------------ */
 .gnb {
   position: absolute; z-index: 100;
-  top: 60px; left: 0; right: 0;
-  width: 780px; height: auto;
+  top: 80px; left: 0; right: 0;
+  width: 780px; height: 40px;
   margin: auto;
 }
 .gnb li {
   float: left;
-  width: auto; height: 100%;
+  width: auto; height: 40px;
   margin-right: 50px;
-  line-height: 60px;
+  line-height: 20px;
   background-color: #fff;
 }
 .gnb li:last-child { margin-right: 0; }
 .gnb li > a {
   display: block;
   width: 100%; height: 100%;
+  border-radius: 5px;
 }
 
 .gnb li:hover a { background-color: #eee }
@@ -111,13 +113,12 @@ h1 a {
   font-weight: 100;
 }
 .accor_wrap {
-  /* display: none; */
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   width: 100%; height: 100%;
 }
-.on { display: flex; }
+/* .on { display: flex; } */
 
 .accor_wrap ul:first-of-type li { padding-left: 60px; }
 
@@ -169,14 +170,14 @@ h1 a {
 }
 .search_area button {
   position: absolute; z-index: 100;
-  bottom: 26px; right: 28px;
+  bottom: 15px; right: 0;
   width: 40px; height: 40px;
   font-size: 25px; line-height: 45px;
 }
 .search_box {
   position: absolute;
-  bottom: 25px; right: 28px;
-  width: 180px; height: 40px;
+  bottom: 15px; right: 0;
+  width: 200px; height: 40px;
   border-radius: 5px;
   border: 0;
   text-indent: 10px;
@@ -443,6 +444,7 @@ h1 a {
 .modal_product_data dt {
   width: auto; height: auto;
   font-size: 22px;
+  word-break: keep-all;
 }
 .modal_product_data dd li:nth-child(1) {
   width: auto; height: auto;
