@@ -50,7 +50,7 @@
       permission = false;
       i += 1;
       if(i >= originSlideLen){
-        slideWrapper.css({'marginLeft' : 100 * i + '%'});
+        slideWrapper.css({'marginLeft' : -100 * i + '%'});
         i = 0;
       };
       slideWrapper.stop().animate({'marginLeft' : -100 * i + '%'}, function(){
@@ -105,7 +105,7 @@
   indiLink.on('click', function(e){
     e.preventDefault();
     i = $(this).parent().index();
-    slideWrapper.stop().animate({'marginLeft' : -100 * i + '%'});
+    slideWrapper.stop().animate({'left' : -100 * i + '%'});
     indicatorFn();
   });
 
