@@ -43,14 +43,17 @@
     clearInterval(play);
   };
 
-  // 현재 다음버튼을 눌렀을때 마지막 슬라이드에서 첫번째 슬라이드로 다시 되돌아가는 시점에서 흰 배경이 뜨는, 오류 존재
-  // 이전 버튼을 눌러서 첫번째 슬라이드에서 마지막 슬라이드로 갈때는 이슈가 없음
+  // 다음 버튼을 눌렀을 때 이상하게 넘어가는 오류 수정 완료
   var nextBtnFn = function(){
     if(permission){
       permission = false;
       i += 1;
       if(i >= originSlideLen){
-        slideWrapper.css({'marginLeft' : -100 * i + '%'});
+        /* 
+          초기 설정이 -100%이기 때문에 자연스럽게 넘어가기 위해서는 0으로 먼저 갔다가 -100%가
+          되어야 함 그래서 0으로 가기위해 margin-left : 100%를 줘야 하는 것!
+        */
+        slideWrapper.css({'marginLeft' : 100 + '%'});
         i = 0;
       };
       slideWrapper.stop().animate({'marginLeft' : -100 * i + '%'}, function(){
@@ -119,3 +122,13 @@
 
 
 })(jQuery);
+
+// permission = true/false
+// permission = true;
+// if(permission){
+//   permission = false;
+//   // 기능 사용
+//   animate(function(){
+//     permission = true;
+//   })
+// }
