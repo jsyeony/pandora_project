@@ -453,7 +453,7 @@ h1 a {
 }
 .modal_product_data dd li:nth-child(2) {
   width: auto; height: auto;
-  line-height: 24px;
+  line-height: 24px; word-break: keep-all;
 }
 .modal_price {
   position: absolute; bottom: 100px;
