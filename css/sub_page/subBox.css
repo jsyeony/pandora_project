@@ -1,0 +1,55 @@
+/* ------------------------------------------------------------------------------------------- */
+#subBox {
+  position: relative; left: 50%;
+  width: 100vw; height: 12vw;
+  transform: translateX(-50%);
+}
+/* 서브박스 콘텐츠 관련 부분 ---------------------------------------------------------- */
+.subbox_contents_area {
+  position: absolute; top: 50%; left: 50%;
+  width: 380px; height: 94px;
+  margin: auto;
+  text-align: center;
+  transform: translate(-50%, -50%);
+}
+.subbox_contents_area h2 {
+  width: auto; height: auto;
+  margin-bottom: 15px;
+  font-size: 25px; font-family: 'Abril Fatface', cursive;
+  line-height: 34px; letter-spacing: 2px;
+}
+.subbox_contents_area span {
+  text-transform: uppercase;
+}
+.subbox_contents_area a {
+  display: block;
+  width: 160px; height: 45px;
+  margin-left: 100px;
+  line-height: 45px;
+  border: 1px solid #171717;
+  border-radius: 6px;
+}
+
+.subbox_contents_area a:hover { background-color: #ccc; }
+.subbox_contents_area a:focus { background-color: #ddd; }
+
+/* 서브박스 이미지 관련 부분 --------------------------------------------------------- */
+#subBox > div {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.sub_bg {
+  position: absolute; z-index: -1;
+  top: 0; right: 0;
+  width: 90%; height: 100%;
+  background-image: url(../../img/subbox/subbox_background_img.png);
+  opacity: 0.5;
+}
+.sub_img {
+  position: absolute;
+  width: 25%; height: 90%;
+  bottom: 0; left: 5%;
+  background-image: url(../../img/subbox/subbox_img.png);
+  box-shadow: 10px 10px 4px rgba(0,0,0,0.25);
+}
