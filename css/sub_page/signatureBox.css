@@ -1,0 +1,64 @@
+/* ------------------------------------------------------------------------------------------- */
+#signatureBox {
+  position: relative;
+  width: 100%; height: 46rem;
+}
+.signature_box_wrapper {
+  position: absolute;
+  top: 0; bottom: 0; left: 0; right: 0;
+  width: 1180px; height: 460px;
+  margin: auto;
+}
+.signature_contents_area {
+  float: left;
+  width: 410px; height: 365px;
+}
+.signature_contents_area h2 {
+  width: 380px; height: auto;
+  margin-bottom: 20px;
+  font-size: 36px; font-family: 'Abril Fatface', cursive;
+  line-height: 48px; letter-spacing: 3px;
+}
+.signature_contents_area p {
+  width: 410px; height: 100px;
+  margin-bottom: 100px;
+  font-size: 18px; line-height: 26px;
+}
+.signature_contents_area a {
+  display: block;
+  width: 200px; height: 45px;
+  line-height: 45px; text-align: center;
+  border: 1px solid #171717;
+  border-radius: 8px;
+  background-color: #fff;
+}
+
+.signature_contents_area a:hover { background-color: #E98987; color: #fff; }
+.signature_contents_area a:focus { outline: 5px solid #E98987; background-color: #eee; }
+
+/* 시그니처 박스 이미지 관련 부분 -------------------------------------------------- */
+#signatureBox div {
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.point_color_bg {
+  position: absolute; z-index: -1;
+  bottom: 0; left: 50%;
+  width: 100vw; height: 335px;
+  background-color: #FFE3E3;
+  transform: translateX(-50%);
+}
+.necklace_img {
+  float: right;
+  /* top: 9.5rem; right: 410px; */
+  width: 380px; height: 460px;
+  margin-right: 20px;
+  background-image: url(../../img/signaturebox/custom_img_01.png);
+}
+.bangle_img {
+  float: right;
+  /* top: 9.5rem; right: 90px; */
+  width: 300px; height: 365px;
+  background-image: url(../../img/signaturebox/custom_img_02.png);
+}
