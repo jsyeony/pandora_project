@@ -1,0 +1,99 @@
+/* ------------------------------------------------------------------------------------------- */
+#collaboBox {
+  position: relative;
+  width: 100%; height: 50rem;
+}
+.collabo_contents_area {
+  width: 780px; height: 124px;
+  padding-top: 120px; margin: auto;
+  text-align: center;
+}
+.collabo_contents_area h2 {
+  width: 100%; height: 56px;
+  font-size: 36px; font-family: 'Abril Fatface', cursive;
+  line-height: 56px; letter-spacing: 4px;
+  text-transform: uppercase;
+}
+.collabo_contents_area p {
+  width: 100%; height: 68px;
+  padding-top: 7px; box-sizing: border-box;
+  font-size: 18px; line-height: 26px;
+}
+
+/* 콜라보 박스 버튼 영역 ---------------------------------------------------------- */
+.collabo_btn_area {
+  position: absolute;
+  top: 470px; left: 0; right: 0;
+  width: 1180px; height: 0;
+  margin: auto;
+}
+.collabo_btn_area button {
+  width: 40px; height: 60px;
+  background-image: url(../../img/collabobox/white_arrow.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 60%;
+}
+.collabo_btn_area button:hover { background-color: rgba(255,255,255,0.25); }
+.collabo_btn_area button:focus { background-color: rgba(255,255,255,0.25); }
+
+
+/* 콜라보 박스 인디케이터 영역 ----------------------------------------------------- */
+.collabo_indicator {
+  position: absolute;
+  bottom: 88px; right: 320px;
+  width: 300px; height: 40px;
+  border-radius: 20px;
+  background-color: #fff;
+}
+.collabo_indicator ul {
+  width: 227px; height: 22px;
+  margin-top: 9px; margin-left: 14px;
+}
+.collabo_indicator li {
+  float: left;
+  width: 22px; height: 100%;
+  margin-right: 27px;
+  border-radius: 20px;
+  background-color: #c4c4c4;
+}
+.collabo_indicator li a {
+  display: block;
+  width: 100%; height: 100%;
+}
+.collabo_indicator li:last-child { margin-right: 0; }
+.collabo_indicator li.on {
+  width: 60px;
+  background-color: #ffc2ca;
+}
+
+.collabo_indicator p {
+  float: right;
+  width: 35px; height: 100%;
+  margin-top: -20px; padding-right: 20px;
+  text-align: right; color: #888;
+}
+.collabo_indicator p > em { font-weight: 700; color: #333; }
+
+.collabo_indicator li:hover { background-color: #888;}
+
+/* 콜라보 박스 이미지 영역 ---------------------------------------------------------- */
+.collabo_slide {
+  width: 1300px; height: 450px;
+  margin: auto; margin-top: 30px;
+  overflow: hidden;
+}
+.collabo_wrapper {
+  width: 400%; height: 100%;
+}
+.collabo_img {
+  float: left;
+  width: 1300px; height: 450px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.marvel_collabo_img_01 { background-image: url('../../img/collabobox/collaboration_img_01.jpg'); }
+.marvel_collabo_img_02 { background-image: url('../../img/collabobox/collaboration_img_02.jpg'); }
+.marvel_collabo_img_03 { background-image: url('../../img/collabobox/collaboration_img_03.jpg'); }
+.marvel_collabo_img_04 { background-image: url('../../img/collabobox/collaboration_img_04.jpg'); }
