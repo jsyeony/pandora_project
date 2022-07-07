@@ -16,8 +16,6 @@
 .footer_upper_list h2 {
   float: right;
   width: 140px; height: 100%;
-  background-image: url(../../img/footbox/sub_logo_white.png);
-  background-repeat: no-repeat;
 }
 
 /* 푸터 네비게이션 바 ------------------------------------------------ */
