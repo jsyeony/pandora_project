@@ -51,14 +51,12 @@
 }
 .necklace_img {
   float: right;
-  /* top: 9.5rem; right: 410px; */
   width: 380px; height: 460px;
   margin-right: 20px;
   background-image: url(../../img/signaturebox/custom_img_01.png);
 }
 .bangle_img {
   float: right;
-  /* top: 9.5rem; right: 90px; */
   width: 300px; height: 365px;
   background-image: url(../../img/signaturebox/custom_img_02.png);
 }
