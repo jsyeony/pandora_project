@@ -45,7 +45,7 @@
 .point_color_bg {
   position: absolute; z-index: -1;
   bottom: 0; left: 50%;
-  width: 100vw; height: 335px;
+  width: 100%; height: 335px;
   background-color: #FFE3E3;
   transform: translateX(-50%);
 }
