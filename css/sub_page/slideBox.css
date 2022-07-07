@@ -2,7 +2,7 @@
 #slideBox {
   position: relative;
   left: 50%;
-  width: 1920px; height: 600px;
+  width: 1903px; height: 600px;
   padding-top: 150px;
   margin: auto; overflow: hidden;
   transform: translateX(-50%);
@@ -36,9 +36,9 @@
 /* 슬라이드 광고 배너 버튼 ------------------------------------------------------ */
 .slide_btn_area {
   position: absolute; z-index: 200;
-  top: 54%; left: 50%;
+  top: 54%; left: 0; right: 0;
+  margin: auto;
   width: 80%; height: 0;
-  transform: translateX(-50%);
 }
 .slide_btn_area button {
   width: 50px; height: 70px;
